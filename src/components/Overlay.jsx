@@ -16,21 +16,25 @@ export function Overlay() {
       {progress === 100 ? (
         <div className={`intro ${play ? "intro--disappear" : ""}`}>
           <h1 className="logo">
-            Bortnytskyi
+            Ан-225 «Мрія»
             <div className="spinner">
               <div className="spinner__image" />
             </div>
           </h1>
 
-          <p className="intro__scroll">Scroll to begin the journey</p>
+          <p className="intro__scroll">
+            Листайте нижче щоб почати нашу подорож
+          </p>
 
           <button className="explore" onClick={() => setPlay(true)}>
-            Explore
+            Більше
           </button>
         </div>
       ) : null}
       <div className={`outro ${end ? "outro--appear" : ""}`}>
-        <p className="outro__text">Wish you had a great flight with us...</p>
+        <p className="outro__text">
+          Переможемо. Відновимо. Мрія жила, живе, і житиме
+        </p>
       </div>
     </div>
   );

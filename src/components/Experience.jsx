@@ -50,39 +50,56 @@ export const Experience = () => {
           curvePoints[1].y,
           curvePoints[1].z
         ),
-        subtitle: `Welcome to Wawatmos,
-Have a seat and enjoy the ride!`,
+        subtitle: `МРІЯ - надважкий транспортний літак, створений 1988 року в СРСР київським КБ імені Антонова`,
       },
       {
         cameraRailDist: 1.5,
         position: new Vector3(
-          curvePoints[2].x + 2,
+          curvePoints[2].x - 5,
           curvePoints[2].y,
-          curvePoints[2].z
+          curvePoints[2].z - 20
         ),
-        title: "Services",
-        subtitle: `Do you want a drink?
-We have a wide range of beverages!`,
+        subtitle: `У 2004 році Міжнародна федерація повітроплавання внесла Ан-225 до Книги рекордів Гіннеса за його 240 рекордів.`,
       },
       {
-        cameraRailDist: -1,
+        cameraRailDist: -1.5,
         position: new Vector3(
-          curvePoints[3].x - 3,
+          curvePoints[3].x - 5,
           curvePoints[3].y,
           curvePoints[3].z
         ),
-        title: "Fear of flying?",
-        subtitle: `Our flight attendants will help you have a great journey`,
+        title: "Використання",
+        subtitle: `В кінці 1990-х був реконструйований і модифікований для перевезення важких вантажів. Ан-225 із максимальною злітною масою 640 т був найважчим літаком у світі`,
       },
       {
         cameraRailDist: 1.5,
         position: new Vector3(
-          curvePoints[4].x + 3.5,
+          curvePoints[4].x + 2,
           curvePoints[4].y,
-          curvePoints[4].z - 12
+          curvePoints[4].z
         ),
-        title: "Movies",
-        subtitle: `We provide a large selection of medias, we highly recommend you Porco Rosso during the flight`,
+        title: "Розробка",
+        subtitle: `Ан-225 був створений, перш за все, для потреб радянської космічної програми, для транспортування вантажів, зокрема космічних кораблів багаторазового використання «Буран» і компонентів ракетної системи «Енергія»`,
+      },
+      {
+        cameraRailDist: 1.5,
+        position: new Vector3(
+          curvePoints[5].x + 2,
+          curvePoints[5].y,
+          curvePoints[5].z
+        ),
+        title: "Ціль",
+        subtitle: `Літак створювався для перевезення компонентів ракет-носіїв «Енергія» й космічного корабля «Буран», але до моменту закінчення будівництва першого Ан-225 всі необхідні перевезення були зроблені літаком ВМ-Т «Атлант», і в програмі «Буран» Ан-225 взяв участь тільки перевезенням «Бурану» на Паризький авіасалон у травні 1989 року і здійсненням кількох показових польотів на Байконурі у квітні 1991 року.`,
+      },
+      {
+        cameraRailDist: 1.5,
+        position: new Vector3(
+          curvePoints[6].x + 2,
+          curvePoints[6].y,
+          curvePoints[6].z
+        ),
+        title: "Знищення",
+        subtitle: `Під час російського вторгнення в Україну 27 лютого 2022 року у результаті повітряної атаки російських окупантів на аеропорт Гостомель під Києвом літак Ан-225 «Мрія», один із найбільших та найпотужніших літаків у світі, був спалений`,
       },
     ];
   }, []);
@@ -187,7 +204,7 @@ We have a wide range of beverages!`,
       {
         scale: new Vector3(3, 3, 3),
         position: new Vector3(
-          curvePoints[3].x - 10,
+          curvePoints[3].x -10,
           curvePoints[3].y,
           curvePoints[3].z + 30
         ),
@@ -223,8 +240,8 @@ We have a wide range of beverages!`,
       {
         scale: new Vector3(3, 3, 3),
         position: new Vector3(
-          curvePoints[4].x + 24,
-          curvePoints[4].y - 6,
+          curvePoints[4].x + 4,
+          curvePoints[4].y - 10,
           curvePoints[4].z - 42
         ),
         rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
@@ -238,22 +255,49 @@ We have a wide range of beverages!`,
         ),
         rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
       },
+      // PRE-FINAL POINT
+      {
+        scale: new Vector3(2, 2, 2),
+        position: new Vector3(
+          curvePoints[5].x + 3,
+          curvePoints[5].y - 10,
+          curvePoints[5].z + 2
+        ),
+      },
+      {
+        scale: new Vector3(3, 3, 3),
+        position: new Vector3(
+          curvePoints[5].x - 32,
+          curvePoints[5].y - 10,
+          curvePoints[5].z - 42
+        ),
+        rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
+      },
+      {
+        scale: new Vector3(3, 3, 3),
+        position: new Vector3(
+          curvePoints[5].x - 4,
+          curvePoints[5].y + 9,
+          curvePoints[5].z - 62
+        ),
+        rotation: new Euler(Math.PI / 3, 0, Math.PI / 3),
+      },
       // FINAL
       {
         scale: new Vector3(3, 3, 3),
         position: new Vector3(
-          curvePoints[7].x + 12,
-          curvePoints[7].y - 5,
-          curvePoints[7].z + 60
+          curvePoints[6].x + 12,
+          curvePoints[6].y - 5,
+          curvePoints[6].z + 60
         ),
         rotation: new Euler(-Math.PI / 4, -Math.PI / 6, 0),
       },
       {
         scale: new Vector3(3, 3, 3),
         position: new Vector3(
-          curvePoints[7].x - 12,
-          curvePoints[7].y + 5,
-          curvePoints[7].z + 120
+          curvePoints[6].x - 12,
+          curvePoints[6].y + 5,
+          curvePoints[6].z + 120
         ),
         rotation: new Euler(Math.PI / 4, Math.PI / 6, 0),
       },
@@ -429,7 +473,7 @@ We have a wide range of beverages!`,
   const tl = useRef();
   const backgroundColors = useRef({
     colorA: "#3535cc",
-    colorB: "#abaadd",
+    colorB: "#6C69FF",
   });
 
   const planeInTl = useRef();
@@ -440,18 +484,18 @@ We have a wide range of beverages!`,
 
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#6f35cc",
-      colorB: "#ffad30",
+      colorA: "#C8A6FF",
+      colorB: "#6100FF",
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#424242",
-      colorB: "#ffcc00",
+      colorA: "#3A42FF",
+      colorB: "#FFCC00",
     });
     tl.current.to(backgroundColors.current, {
       duration: 1,
-      colorA: "#81318b",
-      colorB: "#55ab8f",
+      colorA: "#BD3131",
+      colorB: "#141716",
     });
 
     tl.current.pause();
@@ -551,7 +595,12 @@ We have a wide range of beverages!`,
 
         {/* CLOUDS */}
         {clouds.map((cloud, index) => (
-          <Cloud sceneOpacity={sceneOpacity} {...cloud} key={index} />
+          <Cloud
+            sceneOpacity={sceneOpacity}
+            variant={Math.floor(Math.random() * (2 - 1 + 1) + 1)}
+            {...cloud}
+            key={index}
+          />
         ))}
       </>
     ),

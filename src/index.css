@@ -193,7 +193,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 0.25rem;
   }
 
@@ -210,6 +210,14 @@ body {
 
   .outro__text {
     font-size: 1rem;
+  }
+
+  .explore {
+    margin-top: 140px;
+  }
+
+  .intro__scroll {
+    font-size: .8rem;
   }
 }
 
