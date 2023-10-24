@@ -1,0 +1,53 @@
+@import '@/styles/globals'
+@import '@/styles/variables'
+
+
+.layout
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	width: 100%
+	// overflow-y: hidden
+
+
+
+.page
+	flex-grow: 1
+
+.ProgressBar
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	height: 3px
+	background: linear-gradient(95.54deg, #10002B -12.24%, #7B2CBF 62.54%, #B8B8FF 102.56%) 
+	transform-origin: 0%
+	z-index: 30
+
+
+.MenuItem a
+	position: relative
+	font-size: 1em
+	font-weight: 600
+	text-decoration: none
+	color: $color-main-black
+	&::before
+		content: ''
+		height: 2px
+		width: 100%
+		background: $color-main-purpule
+		position: absolute
+		bottom: -5px
+		left: 0
+		z-index: 3
+		transform: scaleX(0) 
+		transform-origin: 0 50%
+		transition: transform .4s
+		transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+	&:hover
+		&::before
+			transform: scaleX(1)
+
+.footer
+	width: 100%
+	overflow: hidden
