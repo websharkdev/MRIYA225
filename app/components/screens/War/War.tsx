@@ -120,11 +120,11 @@ const War = (props: Props) => {
             <h2 className="font-semibold text-xl lg:text-2xl">Hey threre 👋</h2>
             <p className="font-semibold text-sm md:text-lg text-[#2E2E2E]">
               My name is Oleksii, and my country is currently at war. To be
-              honest and call things by their true names, it's not just a war
-              but a genocide of my people.
+              honest and call things by their true names, it&apos;s not just a
+              war but a genocide of my people.
             </p>
             <p className="font-semibold text-sm md:text-lg text-[#2E2E2E]">
-              We need your help. I've compiled a list of popular Ukrainian
+              We need your help. I&apos;ve compiled a list of popular Ukrainian
               foundations that provide support to both military personnel and
               civilians. Winter is approaching, and it will be a harsh one
               without electricity and heat. The enemy is shelling critical
@@ -137,8 +137,9 @@ const War = (props: Props) => {
               papers to prove it, but I am honest with you. I share aspects of
               my life on social media almost every day, including my work
               processes and volunteer efforts. I understand that this might not
-              inspire a strong desire to trust me. That's why I've attached
-              links to other well-established and reputable foundations.
+              inspire a strong desire to trust me. That&apos;s why I&apos;ve
+              attached links to other well-established and reputable
+              foundations.
             </p>
           </div>
         </div>
