@@ -38,11 +38,13 @@ export const End: FC = () => {
       className={`absolute top-0 left-0 right-0 bottom-0 pointer-events-none`}
     >
       <div
-        className={`flex flex-col	 justify-center items-center gap-y-5 width-full height-screen ${
-          end ? "outro--appear" : ""
+        className={`flex flex-col	 justify-center items-center gap-y-5 width-full height-screen transition-all duration-700 ${
+          end ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="text-xl font-semibold w-max text-white">{text.text}</p>
+        <p className="sm:text-sm xl:text-xl font-semibold w-max text-white">
+          {text.text}
+        </p>
       </div>
     </div>
   );

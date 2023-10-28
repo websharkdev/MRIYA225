@@ -1,5 +1,4 @@
 "use client";
-import { gsap } from "gsap";
 import {
   AIRPLANE_MAX_ANGLE,
   CURVE_AHEAD_AIRPLANE,
@@ -8,27 +7,29 @@ import {
   FRICTION_DISTANCE,
   LINE_NB_POINTS,
 } from "@/config/constants";
+import { useLanguage } from "@/hooks/useLanguage";
 import { usePlay } from "@/providers/MainProvider";
+import { fadeOnBeforeCompile } from "@/utils/fadeMaterial";
 import { Float, PerspectiveCamera, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { gsap } from "gsap";
 import { FC, useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import {
   CatmullRomCurve3,
   Euler,
   Group,
   MathUtils,
+  Quaternion,
   Shape,
   Vector3,
-  Quaternion,
 } from "three";
-import { Speed } from "./components/Play-Speed";
-import { Background } from "./components/Play-Background";
 import { Airplane } from "./components/Play-Airplane";
-import { TextSection } from "./components/Play-TextSection";
-import { fadeOnBeforeCompile } from "@/utils/fadeMaterial";
+import { Background } from "./components/Play-Background";
+import { Balloon } from "./components/Play-Balloon";
 import { Cloud } from "./components/Play-Clouds";
+import { Speed } from "./components/Play-Speed";
+import { TextSection } from "./components/Play-TextSection";
 import { textSectionsData } from "./data";
-import { useLanguage } from "@/hooks/useLanguage";
 
 export const Play: FC = () => {
   const { language }: any = useLanguage();
@@ -460,9 +461,9 @@ export const Play: FC = () => {
   const cameraRail = useRef<any>();
   const camera = useRef<any>();
   const scroll = useScroll();
-  const lastScroll = useRef<any>(0);
+  const lastScroll = useRef<number>(0);
 
-  const { play, setPlay, setHasScroll, end, setEnd } = usePlay();
+  const { play, setHasScroll, end, setEnd } = usePlay();
 
   useFrame((_state, delta) => {
     if (window.innerWidth > window.innerHeight) {
@@ -475,9 +476,9 @@ export const Play: FC = () => {
       camera.current.position.z = 2;
     }
 
-    if (lastScroll.current <= 0 && scroll.offset > 0) {
-      setHasScroll(true);
-    }
+    // if (lastScroll.current <= 0 && scroll.offset > 0) {
+    //   setHasScroll(true);
+    // }
 
     if (play && !end && sceneOpacity.current < 1) {
       sceneOpacity.current = MathUtils.lerp(
@@ -670,9 +671,11 @@ export const Play: FC = () => {
     if (play) {
       planeInTl.current.play();
     }
-
-    useLanguage.persist.rehydrate();
   }, [play]);
+
+  useEffect(() => {
+    useLanguage.persist.rehydrate();
+  }, []);
 
   return (
     <>
@@ -726,6 +729,17 @@ export const Play: FC = () => {
         </mesh>
       </group>
 
+      <Float rotationIntensity={0.2} speed={0.5} floatIntensity={0.2}>
+        <Balloon
+          position={[
+            curvePoints[5].x - 24,
+            curvePoints[5].y,
+            curvePoints[5].z - 42,
+          ]}
+          scale={2}
+          opacity={0.7}
+        />
+      </Float>
       {/* CLOUDS */}
       {clouds.map((cloud, index) => (
         <Cloud

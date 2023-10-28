@@ -35,13 +35,13 @@ const HomePage: NextPage = () => {
         <Canvas>
           {effects}
           <ScrollControls
-            pages={play && !end ? 15 : 0}
-            damping={1}
+            pages={play && !end ? 30 : 0}
+            damping={0.5}
             style={{
               top: "10px",
               left: "0px",
               bottom: "10px",
-              right: "10px",
+              right: "4px",
               width: "auto",
               height: "auto",
               animation: "fadeIn 2.4s ease-in-out 1.2s forwards",
@@ -57,7 +57,9 @@ const HomePage: NextPage = () => {
           </div>
         )}
         {end && (
-          <div className="absolute left-1/2 top-1/2 flex justify-center items-center">
+          <div
+            className={`absolute left-1/2 top-1/2 flex justify-center items-center`}
+          >
             <End />
           </div>
         )}

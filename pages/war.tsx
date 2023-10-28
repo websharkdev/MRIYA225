@@ -3,14 +3,14 @@ import type { NextPage } from "next";
 import Layout from "@/components/layout/Layout";
 
 import Meta from "@/utils/meta/Meta";
-import About from "@/components/screens/About";
+import War from "@/components/screens/War";
 
-const AboutPage: NextPage = () => (
-  <Meta title="About">
+const WarPage: NextPage = () => (
+  <Meta title="War">
     <Layout>
-      <About />
+      <War />
     </Layout>
   </Meta>
 );
 
-export default AboutPage;
+export default WarPage;

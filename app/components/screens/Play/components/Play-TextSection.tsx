@@ -25,7 +25,7 @@ export const TextSection = ({ title, subtitle, ...props }: any) => {
       <Text
         anchorX={"left"}
         anchorY="top"
-        fontSize={0.2}
+        fontSize={window && window.innerWidth > 720 ? 0.2 : 0.4}
         maxWidth={4.8}
         position-y={-0.2}
         font="./fonts/Montserrat-Regular.ttf"

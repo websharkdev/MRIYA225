@@ -40,9 +40,9 @@ export const textSectionsData = [
   },
   {
     id: 5,
-    title_ua: "Ціль",
-    title_en: "Ціль",
-    title_es: "Ціль",
+    title_ua: "Факт",
+    title_en: "Fact",
+    title_es: "Hecho",
     text_ua:
       "Розмах крила Ан-225 - 88,4 м. Лише два літаки у світі перевершують «Мрію» за цим параметром: Hughes H-4 - 97,5 метра, що відноситься до класу човнів, що літають, він піднімався в повітря всього один раз в 1947 році , та двофюзеляжний Stratolaunch, який зараз готується до свого першого польоту та має розмах крила 117,3 м.",
     text_en: `The An-225 has a wingspan of 88.4 m. Only two planes in the world surpass the "MRIYA" in this parameter: the Hughes H-4, 97.5 meters long, which belongs to the class of hydroplanes, took off only once in 1947, and the double-fuselage Stratolaunch, which it is currently preparing for its first flight and has a wingspan of 117.3 m.`,

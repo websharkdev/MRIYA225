@@ -112,8 +112,6 @@ body {
 
 
 .spinner_image {
-    width: 164px;
-    height: 164px;
     background-size: contain;
     background-image: url("../icons/spinner.svg");
     animation: rotate 10s linear infinite;

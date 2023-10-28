@@ -52,13 +52,20 @@ export const Home: FC = () => {
         play ? "pointer-events-none" : ""
       } ${hasScroll ? "overlay--scrolled" : ""}`}
     >
+      <div
+        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-full h-screen transition-all ease-in-out ${
+          progress === 100 ? "opacity-0" : "opacity-100"
+        }`}
+      />
       {progress === 100 ? (
         <div className={`intro ${play ? "intro--disappear" : ""}`}>
           <div className="flex flex-col	 justify-center items-center gap-y-5 width-full height-screen">
             <div className="flex justify-center items-center relative width-max transition-2">
-              <h1 className="text-8xl w-max text-white">{text.logo}</h1>
-              <div className="absolute right-0 top-0 -mr-[42px] -mt-[42px] opacity-1">
-                <div className="aspect-square w-[164px] bg-contain spinner_image" />
+              <h1 className="text-3xl sm:text-5xl xl:text-8xl w-max text-white">
+                {text.logo}
+              </h1>
+              <div className="flex absolute right-0 top-0 -mr-5 -mt-5 xl:-mr-[42px] xl:-mt-[42px] opacity-1">
+                <div className="aspect-square w-16  md:w-24 xl:w-[164px] bg-contain spinner_image" />
               </div>
             </div>
             <button className="explore-btn" onClick={() => setPlay(true)}>
