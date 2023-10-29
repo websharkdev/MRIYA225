@@ -1,27 +1,15 @@
+import { ArrowNEXTIcon } from "@/assets/icons/ui";
+import { HeaderPhoto } from "@/assets/photos";
+import CanvasLayout from "@/components/layout/CanvasLayout";
 import { Button } from "@/components/ui/button";
-import { Float } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { EffectComposer, Noise } from "@react-three/postprocessing";
+import Image from "next/image";
+import Link from "next/link";
 import { useMemo } from "react";
 import { Vector3 } from "three";
-import { Cloud } from "./components";
-import Image from "next/image";
-import { HeaderPhoto } from "@/assets/photos";
-import { ArrowNEXTIcon } from "@/assets/icons/ui";
-import Link from "next/link";
 
 type Props = {};
 
 const About = (props: Props) => {
-  const effects = useMemo(
-    () => (
-      <EffectComposer>
-        <Noise opacity={0.05} />
-      </EffectComposer>
-    ),
-    []
-  );
-
   const clouds = useMemo(() => {
     return [
       {
@@ -39,7 +27,7 @@ const About = (props: Props) => {
     ];
   }, []);
 
-  const fonds = useMemo(() => {
+  const projects = useMemo(() => {
     return [
       {
         name: "Investables",
@@ -69,26 +57,29 @@ const About = (props: Props) => {
     ];
   }, []);
 
-  const data = [
-    {
-      link: "mainto:alexey.bortnytskyi@gmail.com",
-      title: "alexey.bortnytskyi@gmail.com",
-    },
-    {
-      link: "tel:34680522262",
-      title: "34 680 522 262",
-    },
-    {
-      link: "https://github.com/websharkdev",
-      title: "github",
-    },
-    {
-      link: "CV",
-      title: "CV",
-    },
-  ];
+  const Links = useMemo(() => {
+    return [
+      {
+        link: "mainto:alexey.bortnytskyi@gmail.com",
+        title: "alexey.bortnytskyi@gmail.com",
+      },
+      {
+        link: "tel:34680522262",
+        title: "34 680 522 262",
+      },
+      {
+        link: "https://github.com/websharkdev",
+        title: "github",
+      },
+      {
+        link: "CV",
+        title: "CV",
+      },
+    ];
+  }, []);
+
   return (
-    <>
+    <CanvasLayout clouds={clouds}>
       <div className="flex flex-wrap lg:flex-nowrap gap-5 relative">
         <div className="mx-auto w-11/12 lg:w-1/2 bg-[#F8F9FA] h-max rounded-2xl md:rounded-3xl lg:rounded-[45px] flex gap-y-10 flex-nowrap flex-col  p-4 md:p-6 lg:p-9">
           <div className="bg-primary p-4 md:p-6 lg:px-8 lg:py-12 h-max rounded-2xl md:rounded-3xl lg:rounded-[45px] flex justify-between flex-nowrap gap-x-4">
@@ -139,17 +130,17 @@ const About = (props: Props) => {
         </div>
         <div className="mx-auto w-11/12 lg:w-1/2 flex flex-col gap-9">
           <div className="bg-white h-max rounded-2xl md:rounded-3xl lg:rounded-[45px] flex gap-y-5 flex-nowrap flex-col p-4 md:p-6 lg:px-8 lg:py-12">
-            {fonds.slice(0, 5).map((fond, index) => (
+            {projects.slice(0, 5).map((project, index) => (
               <div
-                key={`${index}_${fond.name}`}
+                key={`${index}_${project.name}`}
                 className="flex justify-between bg-[#F8F9FA] outline-none items-center max-h-20  whitespace-nowrap rounded-[1.25rem] p-3 md:p-5 lg:px-8 lg:py-7 text-xl font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary data-[state=active]:text-white"
               >
                 <div className="flex items-center gap-x-9">
                   <h2 className="text-lg font-semibold md:text-xl lg:text-2xl">
-                    {fond.name}
+                    {project.name}
                   </h2>
                   <div className="flex-nowrap items-center gap-x-3 hidden xl:flex ">
-                    {fond.type.map((type: string, id) => (
+                    {project.type.map((type: string, id) => (
                       <span
                         key={id}
                         className="rounded-sm px-4 py-1 text-primary bg-white font-semibold hover:bg-primary hover:text-white"
@@ -163,7 +154,7 @@ const About = (props: Props) => {
                   <Button
                     size="icon"
                     variant="ghost"
-                    href={fond.link}
+                    href={project.link}
                     className="bg-primary w-8 h-8 md:w-14 md:h-14 p-2 md:p-5 aspect-square rounded-full text-white hover:text-primary"
                   >
                     <svg
@@ -193,7 +184,7 @@ const About = (props: Props) => {
               </h3>
               <div className="flex flex-nowrap items-center gap-4">
                 <div className="flex flex-wrap w-full md:w-4/5 gap-2 max-w-none md:max-w-[360px]">
-                  {data.map((item: any, index: number) => (
+                  {Links.map((item: any, index: number) => (
                     <Link
                       href={item.link}
                       target="_blank"
@@ -223,33 +214,7 @@ const About = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  -z-10 w-screen h-screen overflow-hidden">
-        <Canvas
-          className="absolute hidden left-1/2 top-1/2 overflow-hidden -translate-x-1/2 -translate-y-1/2 -z-10"
-          camera={{
-            position: [0, 0, 5],
-            fov: 30,
-          }}
-        >
-          <pointLight position={[3, 3, 3]} intensity={1.5} />
-          {effects}
-          {clouds.map((cloud: any, index: number) => (
-            <Float
-              key={index}
-              floatIntensity={0.5}
-              speed={0.3}
-              rotationIntensity={0.5}
-            >
-              <Cloud
-                {...cloud}
-                variant={Math.floor(Math.random() * (2 - 1 + 1) + 1)}
-                key={index}
-              />
-            </Float>
-          ))}
-        </Canvas>
-      </div>
-    </>
+    </CanvasLayout>
   );
 };
 
