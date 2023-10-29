@@ -30,29 +30,25 @@ const About = (props: Props) => {
   const projects = useMemo(() => {
     return [
       {
-        name: "Investables",
-        type: ["fintech", "b2b"],
-        link: "https://savelife.in.ua/en/",
+        name: "Freelance",
+        type: ["part-time"],
       },
       {
         name: "Investables",
         type: ["fintech", "b2b"],
-        link: "https://www.razomforukraine.org/",
       },
       {
-        name: "Investables",
-        type: ["fintech", "b2b"],
+        name: "NeonPilots",
+        type: ["startups", "b2b"],
         link: "https://u24.gov.ua/en",
       },
       {
-        name: "Investables",
-        type: ["fintech", "b2b"],
-        link: "https://kse.ua/we-save-lives/",
+        name: "Changeblock ",
+        type: ["fintech", "blockchain"],
       },
       {
-        name: "Investables",
-        type: ["fintech", "b2b"],
-        link: "https://www.koloua.com/en/",
+        name: "Freelance",
+        type: ["fintech"],
       },
     ];
   }, []);
@@ -72,7 +68,7 @@ const About = (props: Props) => {
         title: "github",
       },
       {
-        link: "CV",
+        link: "https://webshark.notion.site/CV-bc75484ca7b1458eb7f0cab21e7e74ef",
         title: "CV",
       },
     ];
@@ -150,30 +146,6 @@ const About = (props: Props) => {
                     ))}
                   </div>
                 </div>
-                <div className="period flex flex-nowrap items-center gap-x-9">
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    href={project.link}
-                    className="bg-primary w-8 h-8 md:w-14 md:h-14 p-2 md:p-5 aspect-square rounded-full text-white hover:text-primary"
-                  >
-                    <svg
-                      width="34"
-                      height="34"
-                      viewBox="0 0 34 34"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1L33 33M33 33V2.28M33 33H2.28"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Button>
-                </div>
               </div>
             ))}
           </div>
@@ -200,6 +172,7 @@ const About = (props: Props) => {
                   <Button
                     size="icon"
                     variant="ghost"
+                    href="https://webshark.design/"
                     className="bg-white p-5 w-full h-full rounded-[2rem]"
                   >
                     <Image
