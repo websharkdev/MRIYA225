@@ -1,10 +1,19 @@
 import { fadeOnBeforeCompile } from "@/utils/fadeMaterial";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
+import { MathUtils } from "three";
 
-export function Cloud({ sceneOpacity, variant, ...props }: any) {
+export function Cloud({ variant, ...props }: any) {
   const { nodes, materials }: any = useGLTF("./models/cloud/model.gltf");
   const materialRef = useRef<any>();
+
+  const sceneOpacity = useRef<any>(0);
+
+  useFrame((_state, delta) => {
+    sceneOpacity.current = MathUtils.lerp(sceneOpacity.current, 1, delta * 0.1);
+    materialRef.current.opacity = sceneOpacity.current;
+  });
 
   return (
     <group {...props} dispose={null}>

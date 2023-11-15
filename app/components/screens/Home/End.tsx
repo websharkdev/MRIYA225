@@ -42,7 +42,7 @@ export const End: FC = () => {
           end ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="sm:text-sm xl:text-xl font-semibold w-max text-white">
+        <p className="sm:text-sm xl:text-xl font-semibold w-max max-w-[320px] md:max-w-3xl text-center text-white">
           {text.text}
         </p>
       </div>

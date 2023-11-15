@@ -105,7 +105,10 @@ export const Play: FC = () => {
               curvePoints[5].z
             ),
             title: textSectionsData[4].title_ua,
-            subtitle: textSectionsData[4].text_ua,
+            subtitle:
+              typeof window !== "undefined" && window.innerWidth < 720
+                ? `${textSectionsData[4].text_ua.slice(0, 203)}.`
+                : textSectionsData[4].text_ua,
           },
           {
             cameraRailDist: 1.5,

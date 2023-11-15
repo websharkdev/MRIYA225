@@ -7,7 +7,7 @@ export const texts = [
   },
   {
     id: "button",
-    text_ua: "Більше",
+    text_ua: "Полетіти",
     text_es: "Mas",
     text_en: "More",
   },

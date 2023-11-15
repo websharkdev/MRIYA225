@@ -124,13 +124,12 @@ const War = (props: Props) => {
           </div>
           <div className="bg-primary p-6 md:px-8 md:py-12 h-max rounded-2xl md:rounded-3xl lg:rounded-[45px]">
             <p className="font-semibold text-sm md:text-lg text-[#EDEDFC]">
-              I also want to mention that I am a volunteer. I may not have
-              papers to prove it, but I am honest with you. I share aspects of
-              my life on social media almost every day, including my work
-              processes and volunteer efforts. I understand that this might not
-              inspire a strong desire to trust me. That&apos;s why I&apos;ve
-              attached links to other well-established and reputable
-              foundations.
+              I'd like to emphasize that I am a volunteer. While I may lack
+              official documentation, I'm transparent and candid. I regularly
+              share facets of my life on social media, encompassing my work
+              routines and volunteer activities. I recognize that this may not
+              fully instill trust in me, which is why I've provided links to
+              other established and reputable foundations.
             </p>
           </div>
         </div>

@@ -80,7 +80,7 @@ export const Home: FC = () => {
           <div className={`intro ${play ? "intro--disappear" : ""}`}>
             <div className="flex flex-col	 justify-center items-center gap-y-5 width-full height-screen">
               <div className="flex justify-center items-center relative width-max transition-2">
-                <h1 className="text-3xl sm:text-5xl xl:text-8xl w-max text-white">
+                <h1 className="text-4xl sm:text-5xl md:text-8xl w-max text-white">
                   {text.logo}
                 </h1>
                 <div className="flex absolute right-0 top-0 -mr-5 -mt-5 xl:-mr-[42px] xl:-mt-[42px] opacity-1">

@@ -29,7 +29,7 @@ const CanvasLayout = ({
   return (
     <>
       <div
-        className={`fixed top-0 left-0  bg-white z-100 w-full h-screen transition-all ease-in-out ${
+        className={`fixed top-0 left-0  bg-white z-100 w-full height-[120vh] md:h-screen transition-all ease-in-out ${
           progress === 100 ? "opacity-0" : "opacity-100"
         }`}
       />
