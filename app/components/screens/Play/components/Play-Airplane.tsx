@@ -14,10 +14,13 @@ export function Airplane(props: any) {
         position={[-1.591, 0, 0]}
         scale={window.innerWidth > 720 ? [3, 0.6, 0.6] : [1, 0.2, 0.2]}
       >
-        <mesh geometry={nodes.Plane001.geometry} material={materials.Plaster} />
         <mesh
-          geometry={nodes.Plane001_1.geometry}
-          material={materials.ENGINE}
+          geometry={nodes.Cube001.geometry}
+          material={materials["Plaster.001"]}
+        />
+        <mesh
+          geometry={nodes.Cube001_1.geometry}
+          material={materials["ENGINE.001"]}
         />
       </group>
     </group>

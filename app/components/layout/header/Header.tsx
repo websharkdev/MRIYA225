@@ -63,7 +63,7 @@ export const Header: FC = () => {
 
   return (
     <div
-      className={`container flex justify-between items-center sticky top-5 z-20`}
+      className={`container flex justify-between items-center sticky top-0 md:top-5 z-20`}
     >
       <div className={`p-4 flex justify-between items-center gap-x-6`}>
         <Select

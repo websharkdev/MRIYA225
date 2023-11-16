@@ -30,8 +30,8 @@ const HomePage: NextPage = () => {
       title="MRIYA"
       description="Welcome to the Bortnytskyi Oleksii MRIYA Presentation. It's home page"
     >
-      <div className="h-screen relative">
-        <div className="absolute top-5 w-full">
+      <div className="h-screen overflow-hidden relative">
+        <div className="absolute top-0 md:top-5 w-full">
           <Header />
         </div>
 
@@ -58,13 +58,13 @@ const HomePage: NextPage = () => {
           </Canvas>
         )}
         {!play && (
-          <div className="absolute left-1/2 top-1/2 flex justify-center items-center">
+          <div className="absolute left-1/2 top-1/2 flex justify-center items-center h-full">
             <Home />
           </div>
         )}
         {end && (
           <div
-            className={`absolute left-1/2 top-1/2 flex justify-center items-center`}
+            className={`absolute left-1/2 top-1/2 flex justify-center items-center h-full`}
           >
             <End />
           </div>
