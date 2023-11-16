@@ -78,8 +78,8 @@ export const Home: FC = () => {
       <div className={`absolute top-0 left-0 right-0 bottom-0`}>
         {progress === 100 ? (
           <div className={`intro ${play ? "intro--disappear" : ""}`}>
-            <div className="flex flex-col	 justify-center items-center gap-y-5 width-full height-screen">
-              <div className="flex justify-center items-center relative width-max transition-2">
+            <div className="flex flex-col	justify-center items-center gap-y-5">
+              <div className="flex justify-center items-center relative w-max transition-2">
                 <h1 className="text-[2rem] sm:text-5xl md:text-8xl w-max text-white">
                   {text.logo}
                 </h1>

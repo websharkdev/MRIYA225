@@ -5,7 +5,10 @@
 html,
 body,
 :root {
-    height: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    min-height: 100lvh;
+    position: relative;
 }
 
 @layer base {
