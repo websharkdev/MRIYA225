@@ -34,11 +34,9 @@ export const End: FC = () => {
   }, [language]);
 
   return (
-    <div
-      className={`absolute top-0 left-0 right-0 bottom-0 pointer-events-none`}
-    >
+    <div className={`flex items-center justify-center w-full h-screen`}>
       <div
-        className={`flex flex-col	 justify-center items-center gap-y-5 width-full height-screen transition-all duration-700 ${
+        className={`flex flex-col	justify-center items-center gap-y-5 w-full h-screen transition-all duration-700 ${
           end ? "opacity-100" : "opacity-0"
         }`}
       >

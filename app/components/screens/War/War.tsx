@@ -26,6 +26,16 @@ const War = (props: Props) => {
   const fonds = useMemo(() => {
     return [
       {
+        name: "AZOV",
+        type: ["military"],
+        link: "https://www.azov-one.com/en",
+      },
+      {
+        name: "III-ASSAULT BRIGADE",
+        type: ["military"],
+        link: "https://ab3.support/",
+      },
+      {
         name: "Come Back Alive",
         type: ["military", "civilians"],
         link: "https://savelife.in.ua/en/",
@@ -49,6 +59,11 @@ const War = (props: Props) => {
         name: "KOLO",
         type: ["protection", "military"],
         link: "https://www.koloua.com/en/",
+      },
+      {
+        name: "BORTNYTSKYI | 107 BRIGADE",
+        type: ["drone", "military"],
+        link: "https://send.monobank.ua/jar/8k2Cy5ZKwn",
       },
     ];
   }, []);
@@ -130,6 +145,13 @@ const War = (props: Props) => {
               work routines and volunteer activities. I recognize that this may
               not fully instill trust in me, which is why I&apos;ve provided
               links to other established and reputable foundations.
+            </p>
+            <br />
+            <p className="font-semibold text-sm md:text-lg text-[#EDEDFC]">
+              The last pinned link is an opportunity to support my father and
+              his brigade (107 Brigade) through donations. Your contribution is
+              valuable and will go towards supporting their important work.
+              Thank you for your kindness!
             </p>
           </div>
         </div>

@@ -75,22 +75,20 @@ export const Home: FC = () => {
 
   return (
     <CanvasLayout clouds={clouds} balloonPosition={[-6, -0, -7.6]}>
-      <div className={`absolute top-0 left-0 right-0 bottom-0`}>
+      <div className={`flex items-center justify-center w-full h-screen`}>
         {progress === 100 ? (
-          <div className={`intro ${play ? "intro--disappear" : ""}`}>
-            <div className="flex flex-col	justify-center items-center gap-y-5">
-              <div className="flex justify-center items-center relative w-max transition-2">
-                <h1 className="text-[2rem] sm:text-5xl md:text-8xl w-max text-white">
-                  {text.logo}
-                </h1>
-                <div className="flex absolute right-0 top-0 -mr-5 -mt-5 xl:-mr-[42px] xl:-mt-[42px] opacity-1">
-                  <div className="aspect-square w-16  md:w-24 xl:w-[164px] bg-contain spinner_image" />
-                </div>
+          <div className="flex flex-col	justify-center items-center gap-y-5">
+            <div className="flex justify-center items-center relative w-max transition-2">
+              <h1 className="text-[2rem] sm:text-5xl md:text-8xl w-max text-white">
+                {text.logo}
+              </h1>
+              <div className="flex absolute right-0 top-0 -mr-5 -mt-5 xl:-mr-[42px] xl:-mt-[42px] opacity-1">
+                <div className="aspect-square w-16  md:w-24 xl:w-[164px] bg-contain spinner_image" />
               </div>
-              <button className="explore-btn" onClick={() => setPlay(true)}>
-                {text.button}
-              </button>
             </div>
+            <button className="explore-btn" onClick={() => setPlay(true)}>
+              {text.button}
+            </button>
           </div>
         ) : null}
         {end && (

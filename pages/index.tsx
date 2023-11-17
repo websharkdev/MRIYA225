@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import { ScrollControls, useProgress } from "@react-three/drei";
+import { ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { EffectComposer, Noise } from "@react-three/postprocessing";
 
@@ -14,7 +14,6 @@ import { useMemo } from "react";
 
 const HomePage: NextPage = () => {
   const { play, end } = usePlay();
-  const { progress } = useProgress();
 
   const effects = useMemo(
     () => (
@@ -30,7 +29,7 @@ const HomePage: NextPage = () => {
       title="MRIYA"
       description="Welcome to the Bortnytskyi Oleksii MRIYA Presentation. It's home page"
     >
-      <div className="relative h-[100dvh]">
+      <div className="relative h-screen">
         <div className="absolute top-0 md:top-5 w-full">
           <Header />
         </div>
@@ -59,13 +58,13 @@ const HomePage: NextPage = () => {
         )}
 
         {!play && (
-          <div className="absolute left-1/2 top-1/2 flex justify-center items-center h-full">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center h-full w-full">
             <Home />
           </div>
         )}
         {end && (
           <div
-            className={`absolute left-1/2 top-1/2 flex justify-center items-center h-full`}
+            className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center h-full w-full`}
           >
             <End />
           </div>

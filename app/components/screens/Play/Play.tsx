@@ -85,7 +85,10 @@ export const Play: FC = () => {
               curvePoints[3].z
             ),
             title: textSectionsData[2].title_ua,
-            subtitle: textSectionsData[2].text_ua,
+            subtitle:
+              typeof window !== "undefined" && window.innerWidth < 720
+                ? `${textSectionsData[2].text_ua.slice(0, 149)}.`
+                : textSectionsData[2].text_ua,
           },
           {
             cameraRailDist: 1.5,
@@ -95,7 +98,10 @@ export const Play: FC = () => {
               curvePoints[4].z
             ),
             title: textSectionsData[3].title_ua,
-            subtitle: textSectionsData[3].text_ua,
+            subtitle:
+              typeof window !== "undefined" && window.innerWidth < 720
+                ? `${textSectionsData[3].text_ua.slice(0, 170)}.`
+                : textSectionsData[3].text_ua,
           },
           {
             cameraRailDist: 1.5,
@@ -107,7 +113,7 @@ export const Play: FC = () => {
             title: textSectionsData[4].title_ua,
             subtitle:
               typeof window !== "undefined" && window.innerWidth < 720
-                ? `${textSectionsData[4].text_ua.slice(0, 203)}.`
+                ? `${textSectionsData[4].text_ua.slice(0, 202)}.`
                 : textSectionsData[4].text_ua,
           },
           {

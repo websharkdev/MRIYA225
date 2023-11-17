@@ -7,7 +7,7 @@ body,
 :root {
     height: -webkit-fill-available;
     overflow: hidden;
-    min-height: 100lvh;
+    min-height: 100dvh;
     position: relative;
 }
 
