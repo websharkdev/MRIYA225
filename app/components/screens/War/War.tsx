@@ -70,7 +70,7 @@ const War = (props: Props) => {
 
   const texts = useMemo(() => {
     return [
-      `My name is Oleksii, and my country is currently at war. To be honest and call things by their true names, it&apos;s not just a war but a genocide of my people.`,
+      `My name is Oleksii, and my country is currently at war. To be honest and call things by their true names, it's not just a war but a genocide of my people.`,
       `We need your help. I've compiled a list of popular Ukrainian foundations that provide support to both military personnel and civilians. Winter is approaching, and it will be a harsh one without electricity and heat. The enemy is shelling critical infrastructure that has no military purpose.`,
     ];
   }, []);
